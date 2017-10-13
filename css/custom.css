@@ -22,15 +22,16 @@
 /* Hero
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .hero {
-  background-image: url('../images/montp-exit-crop.png');
+  background-image: url('../images/montp-exit-code.jpg');
   background-size: cover;
-  background-position: right;
+  background-position: left top ;
 }
 
 .hero-heading {
   color: white;
   font-weight: 600;
-  text-shadow: 0px 0px 08px #333333;
+  letter-spacing: .15rem;
+  text-shadow: #333333 3px 0px 0px, #333333 2.83487px 0.981584px 0px, #333333 2.35766px 1.85511px 0px, #333333 1.62091px 2.52441px 0px, #333333 0.705713px 2.91581px 0px, #333333 -0.287171px 2.98622px 0px, #333333 -1.24844px 2.72789px 0px, #333333 -2.07227px 2.16926px 0px, #333333 -2.66798px 1.37182px 0px, #333333 -2.96998px 0.42336px 0px, #333333 -2.94502px -0.571704px 0px, #333333 -2.59586px -1.50383px 0px, #333333 -1.96093px -2.27041px 0px, #333333 -1.11013px -2.78704px 0px, #333333 -0.137119px -2.99686px 0px, #333333 0.850987px -2.87677px 0px, #333333 1.74541px -2.43999px 0px, #333333 2.44769px -1.73459px 0px, #333333 2.88051px -0.838247px 0px;
 }
 
 .phones {
@@ -68,7 +69,8 @@
 }
 
 .traits {
-  max-width: 50%
+  max-width: 50%;
+  margin: 0 auto;
 }
 
 /* Help
@@ -80,7 +82,7 @@
 /* Categories
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .categories {
-  background-image: url('../images/night-track.jpg');
+  background-image: url('../images/fall-highway-duo.jpg');
   background-size: cover;
   color: #fff;
   background-position: center;
@@ -124,6 +126,10 @@
 .footer {
   background-color: #8586C5;
   color: white;
+}
+
+.footer a {
+  color: #FBB03B;
 }
 
 /* Bigger than 550 */
@@ -174,8 +180,8 @@
   }
   .section-description {
     max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 2rem;
+    margin-bottom: 3rem;
   }
   .phone {
     top: -14rem;
@@ -194,13 +200,13 @@
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
   .section {
-    padding: 20rem 0 19rem;
+    padding: 10rem 0 10rem;
   }
   .hero {
     padding: 22rem 0;
   }
   .hero-heading {
-    font-size: 3.0rem;
+    font-size: 4.0rem;
   }
   .phone {
     top: -16rem;
