@@ -52,7 +52,7 @@
   background-image: url('../images/sam-burriss-montp-duo.jpg');
   background-size: cover;
   color: #fff;
-  padding-bottom: 5rem;
+  padding: 20rem;
 }
 .value-multiplier {
   margin-bottom: .5rem;
@@ -93,7 +93,7 @@
 
 .legalese {
   text-align: left;
-  margin-left: 5%;
+  /*margin-left: 5%;*/
 }
 
 .legalese-header {
@@ -200,8 +200,10 @@
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
   .section {
-    padding: 10rem 0 10rem;
+    padding: 15rem 0 15rem;
   }
+  .values { padding: 20rem} /* Override section for The Experience section */
+
   .hero {
     padding: 22rem 0;
   }
