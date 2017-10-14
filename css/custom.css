@@ -52,7 +52,7 @@
   background-image: url('../images/sam-burriss-montp-duo.jpg');
   background-size: cover;
   color: #fff;
-  padding: 20rem;
+  padding: 2rem;
 }
 .value-multiplier {
   margin-bottom: .5rem;
@@ -194,6 +194,9 @@
   }
   .categories {
     padding: 15rem 0 8rem;
+  }
+  .values {
+    padding: 2rem;
   }
 }
 
