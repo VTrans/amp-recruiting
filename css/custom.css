@@ -1,9 +1,3 @@
-/* Shared
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button {
-  border-radius: 100px;
-}
-
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
@@ -32,18 +26,6 @@
   font-weight: 600;
   letter-spacing: .15rem;
   text-shadow: #333333 3px 0px 0px, #333333 2.83487px 0.981584px 0px, #333333 2.35766px 1.85511px 0px, #333333 1.62091px 2.52441px 0px, #333333 0.705713px 2.91581px 0px, #333333 -0.287171px 2.98622px 0px, #333333 -1.24844px 2.72789px 0px, #333333 -2.07227px 2.16926px 0px, #333333 -2.66798px 1.37182px 0px, #333333 -2.96998px 0.42336px 0px, #333333 -2.94502px -0.571704px 0px, #333333 -2.59586px -1.50383px 0px, #333333 -1.96093px -2.27041px 0px, #333333 -1.11013px -2.78704px 0px, #333333 -0.137119px -2.99686px 0px, #333333 0.850987px -2.87677px 0px, #333333 1.74541px -2.43999px 0px, #333333 2.44769px -1.73459px 0px, #333333 2.88051px -0.838247px 0px;
-}
-
-.phones {
-  position: relative;
-}
-.phone {
-  position: relative;
-  max-width: 80%;
-  margin: 3rem auto -12rem;
-}
-.phone + .phone {
-  display: none;
 }
 
 /* Values
@@ -87,9 +69,6 @@
   color: #fff;
   background-position: center;
 }
-.categories .section-description {
-  margin-bottom: 4rem;
-}
 
 .legalese {
   text-align: left;
@@ -99,26 +78,6 @@
 .legalese-header {
   margin-left: 0%;
   text-align: center;
-}
-
-.legalese-body {
-  text-align: center;
-}
-
-/* Apply
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.apply {
-  background-color: #3BB2D0;
-  color: white;
-}
-
-.apply a {
-  color: #FBB03B;
-}
-
-.apply .button {
-  background-color: white;
-  color: black;
 }
 
 /* Footer
@@ -141,21 +100,6 @@
     padding-bottom: 12rem;
     text-align: left;
     height: 165px;
-  }
-  .phone {
-    position: absolute;
-    top: -7rem;
-    right: 3rem;
-    max-height: 362px;
-    z-index: 3;
-  }
-  .phone + .phone {
-    top: -6rem;
-    display: block;
-    max-width: 73.8%;
-    right: 0;
-    z-index: 2;
-    max-height: 338px;
   }
   .hero-heading {
     font-size: 2.4rem;
@@ -183,15 +127,6 @@
     font-size: 2rem;
     margin-bottom: 3rem;
   }
-  .phone {
-    top: -14rem;
-    right: 5rem;
-    max-height: 510px;
-  }
-  .phone + .phone {
-    top: -12rem;
-    max-height: 472px;
-  }
   .categories {
     padding: 15rem 0 8rem;
   }
@@ -212,13 +147,5 @@
   }
   .hero-heading {
     font-size: 4.0rem;
-  }
-  .phone {
-    top: -16rem;
-    max-height: 615px;
-  }
-  .phone + .phone {
-    top: -14rem;
-    max-height: 570px;
   }
 }
