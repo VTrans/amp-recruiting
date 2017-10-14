@@ -22,7 +22,7 @@
 /* Hero
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .hero {
-  background-image: url('../images/montp-exit-code-sm.webp');
+  background-image: url('../images/montp-exit-code-sm.jpg');
   background-size: cover;
   background-position: left top ;
 }
@@ -49,7 +49,7 @@
 /* Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .values {
-  background-image: url('../images/sam-burriss-montp-duo-sm.webp');
+  background-image: url('../images/sam-burriss-montp-duo-sm.jpg');
   background-size: cover;
   color: #fff;
   padding: 2rem;
@@ -82,7 +82,7 @@
 /* Categories
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .categories {
-  background-image: url('../images/fall-highway-duo-sm.webp');
+  background-image: url('../images/fall-highway-duo-sm.jpg');
   background-size: cover;
   color: #fff;
   background-position: center;
