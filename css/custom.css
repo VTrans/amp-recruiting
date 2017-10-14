@@ -201,7 +201,7 @@
 }
 
 /* Bigger than 1000 */
-@media (min-width: 1000px) {
+@media (min-width: 1025px) {
   .section {
     padding: 15rem 0 15rem;
   }
