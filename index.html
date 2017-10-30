@@ -23,10 +23,24 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
+  <style media="screen">
+  #map {
+    position:relative;
+    top:0;
+    bottom:0;
+    width:100%;
+    height: 75%;
+    max-height: 512px;
+    min-height: 256px;
+  }
+
+  </style>
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
+  <link href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" rel="stylesheet" />
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -299,6 +313,44 @@
       </div>
     </div>
   </div>
+  <div class="section tasks">
+    <div class="container">
+      <div class="row">
+        <div class="six columns offset-by-three center">
+          <h3 class="legalese-header">The Tasks</h3>
+          <p>What will you do on day one?</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <p><strong>Mapillary Integration</strong></p>
+          <p>
+            We are partnering with <a href="https://www.mapillary.com/" target="_blank">Mapillary</a>
+            to host and serve our Right of Way forward facing photos, replacing
+            the <a href="https://www.ivisionroadware.com/vermont/#/Login" target="_blank">legacy system</a>.
+            We would like to bring our data into the <a href="https://www.mapillary.com/arcgis" target="_blank">ArcGIS platform</a> with their integrations.
+          </p>
+        </div>
+        <div class="four columns">
+          <p><strong>GeoCortex Development</strong></p>
+          <p>
+            Vermont uses <a href="http://www.geocortex.com/"  target="_blank">GeoCortex</a> to enhance our web based mapping applications.
+            We would like you to pick up this <a href="http://maps.vermont.gov/VTRANS/Html5Viewer_2_8/index.html?viewer=ScopingTool.ScopingTool_gvh" target="_blank">
+            pilot project</a> and help take it to the next level.
+          </p>
+        </div>
+        <div class="four columns">
+          <p><strong>VTransparency Support</strong></p>
+          <p>
+            VTrans is committed to transparency in all that we do, and maps and data are no exception.
+            We're wrapping up a Scrum to develop the latest version of our
+            <a href="http://vtrans.vermont.gov/content/vtp" target="_blank">Public Information Portal</a>
+            and are looking towards the future.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="section">
     <div class="container">
       <div class="row">
@@ -355,9 +407,52 @@
             teleworking is allowed. Relocation reimbursement is not available.</i></p>
         </div>
       </div>
+      <div class="row">
+        <div class="twelve columns">
+          <div id="map">
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
+<div class="section hiring">
+  <div class="container">
+    <div class="row">
+      <div class="eight columns offset-by-two">
+        <h3 class="center">The Process</h3>
+        <p>What to expect during the hiring process.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <ol>
+          <li>Job advertised for 10 working days</li>
+          <li>Panel reviews resumes</li>
+          <li>Selected candidates offered interview times</li>
+          <li>First interviews</li>
+          <li>Second interviews <small>(If necessary)</small></li>
+          <li>Offer</li>
+        </ol>
+      </div>
+      <div class="six columns">
+        <strong>Interviews</strong>
+        <p>
+          Interviews will be panel style, with each panelist asking a few questions.
+          You should expect to take up an entire hour, but 90 minutes have been
+          allotted to provide for overrun.
+        </p>
+        <p>
+          The panel will ask you questions questions based on our analysis of the
+          core competencies required for this position.
+        </p>
+        <p>
+          There will also be an interactive task to evaluate your coding ability.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
   <div class="section apply" id="apply">
     <div class="container">
       <div class="row">
@@ -367,7 +462,8 @@
         <h1>Ready to get started?</h1>
         <p>
           <i>
-            As of 10/23, the position nearly ready to be posted. You can still send a
+            As of 10/30, the position nearly ready to be posted. It will likely be online before 11/3. 
+            You can still send a
             resume and cover letter in order to express your interest and
             be notified when the postion is posted to <a href="mailto:stephen.smith@vermont.gov">Stephen Smith</a>.
           </i>
@@ -391,7 +487,7 @@
   <div class="section footer">
     <div class="container">
       <div class="row">
-        <div class="twelve columns">
+        <div class="ten columns offset-by-one center">
           <strong>Thanks to:</strong>
           <p>
             <a href="https://unsplash.com/photos/vkHkVBgmA4k/share">Sam Burriss</a>,
@@ -403,7 +499,7 @@
             Pine Tools for the <a href="http://pinetools.com/duotone-effect-spotify">Duotone Effect</a>
           </p>
           <p>
-            Mapbox for the inspirational hiring pages.
+            Mapbox and Axis Maps for their inspirational hiring pages.
           </p>
           <p>
             Skeleton for the lightweight CSS
@@ -416,6 +512,16 @@
     </div>
 
   </div>
+  <script>
+  L.mapbox.accessToken = 'pk.eyJ1IjoidnRyYW5zcGFyZW5jeSIsImEiOiJjajhjMG50dGkwNG5rMzBvMDF5OHM5N3BwIn0.HE4uL6s3cg-PDRe6lKhuEA';
+  var map = L.mapbox.map('map')
+      .setView([44.256988, -72.583816], 15);
+
+  // Add tiles from the Mapbox Static API tiles endpoint
+  // (https://www.mapbox.com/api-documentation/#retrieve-raster-tiles-from-styles)
+  // Tiles are 512x512 pixels and are offset by 1 zoom level
+  L.mapbox.styleLayer('mapbox://styles/mapbox/emerald-v8').addTo(map);
+</script>
 
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

@@ -80,6 +80,14 @@
   text-align: center;
 }
 
+.tasks {
+  background-color: orange;
+}
+
+.hiring {
+  background-color: lightblue;
+}
+
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .footer {
