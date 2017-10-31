@@ -23,24 +23,12 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/custom.css">
-  <style media="screen">
-  #map {
-    position:relative;
-    top:0;
-    bottom:0;
-    width:100%;
-    height: 75%;
-    max-height: 512px;
-    min-height: 256px;
-  }
-
-  </style>
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css" rel="stylesheet">
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
-  <link href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" rel="stylesheet" />
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -328,7 +316,7 @@
             We are partnering with <a href="https://www.mapillary.com/" target="_blank">Mapillary</a>
             to host and serve our Right of Way forward facing photos, replacing
             the <a href="https://www.ivisionroadware.com/vermont/#/Login" target="_blank">legacy system</a>.
-            We would like to bring our data into the <a href="https://www.mapillary.com/arcgis" target="_blank">ArcGIS platform</a> with their integrations.
+            We would like your help to bring our data into the <a href="https://www.mapillary.com/arcgis" target="_blank">ArcGIS platform</a> with their integrations.
           </p>
         </div>
         <div class="four columns">
@@ -342,10 +330,10 @@
         <div class="four columns">
           <p><strong>VTransparency Support</strong></p>
           <p>
-            VTrans is committed to transparency in all that we do, and maps and data are no exception.
+            VTrans is committed to transparency in all that we do.
             We're wrapping up a Scrum to develop the latest version of our
             <a href="http://vtrans.vermont.gov/content/vtp" target="_blank">Public Information Portal</a>
-            and are looking towards the future.
+            and are looking towards more advanced features in the future.
           </p>
         </div>
       </div>
@@ -420,16 +408,18 @@
   <div class="container">
     <div class="row">
       <div class="eight columns offset-by-two">
-        <h3 class="center">The Process</h3>
-        <p>What to expect during the hiring process.</p>
+        <div class="center">
+          <h3>The Process</h3>
+          <p>What to expect during the hiring process.</p>
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="six columns">
         <ol>
-          <li>Job advertised for 10 working days</li>
-          <li>Panel reviews resumes</li>
-          <li>Selected candidates offered interview times</li>
+          <li>Posting open for 10 working days</li>
+          <li>Interview panel reviews applicants</li>
+          <li>Selected candidates offered interviews</li>
           <li>First interviews</li>
           <li>Second interviews <small>(If necessary)</small></li>
           <li>Offer</li>
@@ -447,7 +437,7 @@
           core competencies required for this position.
         </p>
         <p>
-          There will also be an interactive task to evaluate your coding ability.
+          There will also be an interactive coding task to evaluate your programming ability.
         </p>
       </div>
     </div>
@@ -462,7 +452,7 @@
         <h1>Ready to get started?</h1>
         <p>
           <i>
-            As of 10/30, the position nearly ready to be posted. It will likely be online before 11/3. 
+            As of 10/30, the position nearly ready to be posted. It will likely be online before 11/3.
             You can still send a
             resume and cover letter in order to express your interest and
             be notified when the postion is posted to <a href="mailto:stephen.smith@vermont.gov">Stephen Smith</a>.
@@ -513,14 +503,69 @@
 
   </div>
   <script>
-  L.mapbox.accessToken = 'pk.eyJ1IjoidnRyYW5zcGFyZW5jeSIsImEiOiJjajhjMG50dGkwNG5rMzBvMDF5OHM5N3BwIn0.HE4uL6s3cg-PDRe6lKhuEA';
-  var map = L.mapbox.map('map')
-      .setView([44.256988, -72.583816], 15);
 
-  // Add tiles from the Mapbox Static API tiles endpoint
-  // (https://www.mapbox.com/api-documentation/#retrieve-raster-tiles-from-styles)
-  // Tiles are 512x512 pixels and are offset by 1 zoom level
-  L.mapbox.styleLayer('mapbox://styles/mapbox/emerald-v8').addTo(map);
+  var NationLifeGeojson = {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.58394211530685,
+          44.257181743163514
+        ]
+      }
+    }
+  ]
+};
+
+  var randStyle = Math.floor(Math.random()*3);
+
+  switch(randStyle) {
+    case 0:
+      backgroundMap = 'mapbox://styles/vtransparency/cj94vk2ob0cyn2rt2x9yi4hon'
+      break;
+    case 1:
+      backgroundMap = 'mapbox://styles/vtransparency/cj94vjnsi0d3a2sl1i9ufxlqj'
+      break;
+    case 2:
+      backgroundMap = 'mapbox://styles/vtransparency/cj94vizzl0d052rknwxzgdfxw'
+      break;
+    case 3:
+      backgroundMap = 'mapbox://styles/vtransparency/cj95q6kkt6fqw2sown9bcqy09'
+      break;
+  }
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoidnRyYW5zcGFyZW5jeSIsImEiOiJjajhjMG50dGkwNG5rMzBvMDF5OHM5N3BwIn0.HE4uL6s3cg-PDRe6lKhuEA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: backgroundMap,
+    center: [-72.583816, 44.256988],
+    zoom: 13
+  });
+
+  map.scrollZoom.disable();
+
+  map.on('load', function() {
+    map.loadImage('images/star-15.svg', function(error, image) {
+      if (error) throw error;
+      map.addImage('star', image);
+      map.addLayer({
+        "id": "points",
+        "type": "symbol",
+        "source": {
+          "type": "geojson",
+          "data": NationLifeGeojson,
+        },
+        "layout": {
+          "icon-image": "star",
+          "icon-size": 1
+        }
+      });
+    });
+  });
 </script>
 
   <!-- End Document
