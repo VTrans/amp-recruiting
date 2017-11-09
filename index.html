@@ -359,7 +359,7 @@
         </div>
         <div class="four columns">
           <h5>Real Advancement</h5>
-          <p>This chart shows real pay raises from step increases, job class promitions, and estimated Cost of Living* adjustments.</p>
+          <p>This chart shows real pay raises from step increases, job class promotions, and estimated Cost of Living* adjustments.</p>
           <img src="images\hypothetical-pay.PNG" alt="" class="u-max-full-width">
           <p><small><i>*Subject to bi-annual
             <a href="http://www.vsea.org/" target="_blank">Union</a>
@@ -484,7 +484,7 @@
         </p>
         <p>
           <small>
-          *These questions will be used by the system to determine your elligibility for
+          *These questions will be used by the system to determine your eligibility for
           the position.
           </small>
         </p>
@@ -548,7 +548,7 @@
           <p>
             <a href="https://unsplash.com/photos/vkHkVBgmA4k/share">Sam Burriss</a>,
             <a href="https://unsplash.com/photos/8OyKWQgBsKQ">Markus Spiske</a>, and
-            <a href="https://unsplash.com/photos/an92Mth-ExE">Thomas Lefebcvre</a>
+            <a href="https://unsplash.com/photos/an92Mth-ExE">Thomas Lefebvre</a>
             for their photos from Unsplash.com
           </p>
           <p>
@@ -569,23 +569,6 @@
 
   </div>
   <script>
-
-  var NationLifeGeojson = {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -72.58394211530685,
-          44.257181743163514
-        ]
-      }
-    }
-  ]
-};
 
   var randStyle = Math.floor(Math.random()*3);
 
@@ -614,24 +597,33 @@
 
   map.scrollZoom.disable();
 
-  map.on('load', function() {
-    map.loadImage('images/star-15.svg', function(error, image) {
-      if (error) throw error;
-      map.addImage('star', image);
-      map.addLayer({
-        "id": "points",
-        "type": "symbol",
-        "source": {
-          "type": "geojson",
-          "data": NationLifeGeojson,
-        },
-        "layout": {
-          "icon-image": "star",
-          "icon-size": 1
-        }
-      });
-    });
-  });
+  var geojson = {
+    type: 'FeatureCollection',
+    features: [{
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          -72.58394211530685,
+          44.257181743163514
+        ]
+      }
+    }]
+  };
+
+  // add markers to map
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+  .setLngLat(marker.geometry.coordinates)
+  .addTo(map);
+});
+
 </script>
 
   <!-- End Document

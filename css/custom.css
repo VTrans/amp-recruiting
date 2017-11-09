@@ -112,6 +112,15 @@
   min-height: 256px;
 }
 
+.marker {
+  background-image: url('../images/star-15.svg');
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .doc-icon {
   max-width: 100px;
   max-height: 100px;
