@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Spatial Web Developer</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css" rel="stylesheet">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+
+  <script type="text/javascript">
+    // Hiring smart people
+    if (typeof console !== 'undefined' && typeof console.log === 'function' && !window.test) {
+      console.log(
+        '\r\n%c                     *      .--.\r\n%c                           \/ \/  `\r\n%c          +               | |\r\n%c                 \'         \\ \\__,\r\n%c             *          +   \'--\'  *\r\n%c                 +   \/\\\r\n%c    +              .\'  \'.   *\r\n%c           *      \/======\\      +\r\n%c                 ;:.  _   ;\r\n%c                 |:. (_)  |\r\n%c                 |:.  _   |\r\n%c       +         |:. (_)  |          *\r\n%c                 ;:.      ;\r\n%c               .\' \\:.    \/ `.\r\n%c              \/ .-\'\':._.\'`-. \\\r\n%c              |\/    \/||\\    \\|\r\n%c            _..--\"\"\"````\"\"\"--.._\r\n%c      _.-\'``                    ``\'-._\r\n%c    -\'         %cHello, explorer%c        \'-\r\n%c' +
+        '\n       Curious? stephen.smith@vermont.gov',
+        'color:#D0E3F1', 'color:#D0E3F1', 'color:#C0DAEC', 'color:#C0DAEC', 'color:#B0D1E8', 'color:#B0D1E8', 'color:#A1C7E3', 'color:#A1C7E3', 'color:#91BEDE', 'color:#91BEDE', 'color:#81B5D9', 'color:#81B5D9', 'color:#72ABD5', 'color:#72ABD5',
+        'color:#62A2D0', 'color:#62A2D0', 'color:#5299CB', 'color:#5299CB', 'color:#4390C7', 'color:#4390C7', 'color:#4390C7', 'color: #000000');
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <div class="section hero">
+    <div class="container">
+      <div class="row">
+        <!-- <div class="one-half column phones">
+          <img class="phone" src="images/collector_iphone6.png">
+          <img class="phone" src="images/collector_iphone6_map.png">
+        </div> -->
+        <div class="one-half column">
+          <h1 class="hero-heading">Become Vermont's next Civic Hacker</h1>
+          <!-- <a class="button button-primary" href="#apply">Join the Asset Management team</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="ten columns">
+          <p>
+            The Vermont Agency of Transportation (VTrans) in Montpelier is seeking
+            to hire a techincally savvy web mapper to join the Asset Management Bureau's
+            Data Management Section.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <h2>The Team</h2>
+          <p>
+            The goal of Asset Management is to help VTrans identify the right
+            treatment on the right asset at the right time.
+          </p>
+          <p>
+            The Data Management section aims to bring highway asset data
+            to decision makers to enhance their processes. We support a wide range of
+            business units with database management, reporting, analytics, and data collection.
+            We often use custom web mapping applications to solve users’ problems.
+          </p>
+          <!-- <p>
+            The <strong>Data Management Section</strong> is the technology branch of the Bureau, in charge
+            of asset databases, applications, collection, and reporting systems.
+          </p> -->
+        </div>
+        <div class="eight columns">
+          <h2>The Role</h2>
+          <p>
+            We are seeking someone with strong technical skills to help us make
+            spatial data more accessible to our users through lightweight web applications.
+          </p>
+          <p>
+            We are seeking a passionate web map developer to help make spatial
+            data more accessible. You will be responsible for creating lightweight,
+            user-friendly interfaces for our data. Bring your solid communication
+            skills to bear on complex problems. Bring your empathy to stakeholder
+            interviews and user testing. Come ready to learn, because our Agency
+            possesses deep institutional, industrial, and transportation engineering
+            knowledge. Bring your attention to detail to make our users’ experience magical.
+          </p>
+          <!-- <p>
+            You will bring your considerable insights, inspirations, and innovations
+            to enhance state government. <br> We will rely on your skills to help
+            us find a better way of doing things. You could:
+            <br> Invent a new way to use maps and data to drive better decisions.
+            Code a web app. Make an infographic. Craft a cartographic masterpiece.
+            Publish open data. Create an API. <br>
+            <strong>GET CREATIVE!</strong>
+          </p> -->
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+
+  </div>
+
+  <div class="section values">
+    <div class="container">
+      <div class="row">
+        <div class="eight columns offset-by-two center">
+          <h1>The Experience</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-third column value">
+          <h2 class="value-multiplier">200,000+</h2>
+          <h5 class="value-heading">Assets Managed</h5>
+          <p class="value-description">Bridges, Culverts, Pavement, Signs, Guardrail, and more.</p>
+        </div>
+        <div class="one-third column value">
+          <h2 class="value-multiplier">1,300+</h2>
+          <h5 class="value-heading">Agency Employees</h5>
+          <p class="value-description">From Maintenance to Design to Construction to Planning to Finances.</p>
+          <!-- <p class="value-description">
+            <small>(The rest of the time is spent in the otrffice doing cool stuff)</small>
+          </p> -->
+        </div>
+        <div class="one-third column value">
+          <h2 class="value-multiplier">$600+ M</h2>
+          <h5 class="value-heading">Transportation Budget</h5>
+          <p class="value-description">
+            It takes a lot to maintain all of that.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section get-help">
+    <div class="container">
+      <h3 class="section-heading">The Attitude</h3>
+      <p class="section-description">We're looking for someone who:</p>
+      <div class="row">
+        <div class="six columns">
+          <div class="traits">
+            <img src="images/speech.svg" />
+          </div>
+          <br>
+          <strong>Communicates well</strong>
+          <p>
+            Effective communication, whether it’s face-to-face, in a meeting, or in an email, is vital to fostering good teamwork amongst civil servants and the wider community.
+          </p>
+        </div>
+        <div class="six columns">
+          <div class="traits">
+            <img src="images/fire.svg" class="" />
+          </div>
+          <br>
+          <strong>Gets fired up</strong>
+          <p>
+            Enthusiasm for your craft, passion for problem solving, and being fired up about public service is important to our team. We want someone who is all-in with our mission and vision.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <div class="traits">
+            <img src="images/heart.svg" class="" />
+          </div>
+          <br>
+          <strong>Has empathy</strong>
+          <p>
+            We're a tight-knit group of people who care for one another. The government needs someone who cares about their teammates and the citizens they work for.
+          </p>
+        </div>
+        <div class="six columns">
+          <div class="traits">
+            <img src="images/books.svg" class="" />
+          </div>
+          <br>
+          <strong>Is Ready to Learn</strong>
+          <p>
+            We value potential over all else. We look for people who, with our investment, will grow quickly and contribute to our team's future.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section categories">
+    <div class="container">
+      <h3 class="section-heading center">The Skills</h3>
+      <div class="row">
+        <div class="four columns">
+          <p><strong>Frontend</strong></p>
+          <p>
+            Comfort with web technologies (JavaScript, HTML, CSS), especially working with REST endpoints and APIs to query and present data.
+          </p>
+        </div>
+        <div class="four columns">
+          <p><strong>Web Mapping</strong></p>
+          <p>
+            Experience with web mapping libraries, such as Esri’s Javascript API, Leaflet or Mapbox.
+          </p>
+        </div>
+        <div class="four columns">
+          <p><strong>Geospatial</strong></p>
+          <p>
+            Familiarity with geographic data. You’ll have plenty of support on this, but you should understand the strengths and limitations of spatial data, and how it can be modified.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <p><strong>Design</strong></p>
+          <p>
+            A good eye for design and an understanding of user experience principles.
+          </p>
+        </div>
+        <div class="four columns">
+          <p><strong>Magic</strong></p>
+          <p>
+            You delight in the details. You enjoy spending the extra time to make the experience magical and continuously strive to raise the bar for your team.
+          </p>
+        </div>
+        <div class="four columns">
+          <p><strong>Resourceful</strong></p>
+          <p>
+            You won't be asked to fly solo, but you should be resourceful enough to find solutions when you're stuck.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="four columns offset-by-four">
+          <p><strong>Self-Taught</strong></p>
+          <p>
+            You’ll be surrounded by teammates with deep experience in strategy, data, code, and design, but we expect to be learning just as much from you
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section legalese">
+    <div class="container">
+      <div class="row">
+        <div class="six columns offset-by-three">
+          <h3 class="legalese-header">The Requirements</h3>
+          <p>
+            This position is being advertised at three different levels:
+          </p>
+          <ul>
+            <li><a href="http://humanresources.vermont.gov/staffing/classification/job-specifications?code=110210" target="_blank">AOT GIS Professional II</a></li>
+            <li><a href="http://humanresources.vermont.gov/staffing/classification/job-specifications?code=110310" target="_blank">AOT GIS Professional III</a></li>
+            <li><a href="http://humanresources.vermont.gov/staffing/classification/job-specifications?code=110410" target="_blank">AOT GIS Professional IV</a></li>
+          </ul>
+          <p>
+            Below is a brief summary illustration of how to qualify for each level.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <div class="u-max-full-width center">
+            <a href="images\gispro-qual.png" target="_blank">
+            <img src="images\gispro-qual.png" alt="" class="u-max-full-width">
+          </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ten columns offset-by-one">
+          <p>
+            Education and experience can be in GIS, geography, computer science,
+            transportation,
+            or <strong>other closely related field.</strong> <i>If you feel that
+            your skills are relevant, please apply.</i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section tasks">
+    <div class="container">
+      <div class="row">
+        <div class="six columns offset-by-three center">
+          <h3 class="legalese-header">The Tasks</h3>
+          <p>What will you do on day one?</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <p><strong>Mapillary Integration</strong></p>
+          <p>
+            We are partnering with <a href="https://www.mapillary.com/" target="_blank">Mapillary</a>
+            to host and serve our Right of Way forward facing photos, replacing
+            the <a href="https://www.ivisionroadware.com/vermont/#/Login" target="_blank">legacy system</a>.
+            We would like your help to bring our data into the <a href="https://www.mapillary.com/arcgis" target="_blank">ArcGIS platform</a> with their integrations.
+          </p>
+        </div>
+        <div class="four columns">
+          <p><strong>GeoCortex Development</strong></p>
+          <p>
+            Vermont uses <a href="http://www.geocortex.com/"  target="_blank">GeoCortex</a> to enhance our web based mapping applications.
+            We would like you to pick up this <a href="http://maps.vermont.gov/VTRANS/Html5Viewer_2_8/index.html?viewer=ScopingTool.ScopingTool_gvh" target="_blank">
+            pilot project</a> and help take it to the next level.
+          </p>
+        </div>
+        <div class="four columns">
+          <p><strong>VTransparency Support</strong></p>
+          <p>
+            VTrans is committed to transparency in all that we do.
+            We're wrapping up a Scrum to develop the latest version of our
+            <a href="http://vtrans.vermont.gov/content/vtp" target="_blank">Public Information Portal</a>
+            and are looking towards more advanced features in the future.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <h3 class="legalese-header">The Package</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="four columns">
+          <h5>Starting Pay Range</h5>
+          <p><strong>$45,281 - $57,262</strong> <br>
+            <i><a href="images\Pay_Chart_Annotated.pdf" target="_blank">Pay Chart</a></i></p>
+          <p><strong>Raises</strong><br> You are eligible for a step increase after 6 months, and again each subsequent year for the first 5 steps. See Article 45 in the
+            <a href="http://humanresources.vermont.gov/sites/humanresources/files/documents/Labor_Relations_Policy_EEO/Labor_Relations/DHR-Non-Management_Contract_16_18.pdf" target="_blank">
+              Non-Managment Contract
+            </a> for more details.
+          </p>
+        </div>
+        <div class="four columns">
+          <h5>Real Advancement</h5>
+          <p>This chart shows real pay raises from step increases, job class promotions, and estimated Cost of Living* adjustments.</p>
+          <img src="images\hypothetical-pay.PNG" alt="" class="u-max-full-width">
+          <p><small><i>*Subject to bi-annual
+            <a href="http://www.vsea.org/" target="_blank">Union</a>
+            negotiations</i></small></p>
+        </div>
+        <div class="four columns">
+          <h5>Benefits</h5>
+          <p><strong>Nobody can top this.</strong></p>
+          <ul>
+            <li><a href="http://www.vsea.org/">Union Membership</a></li>
+            <li>Health & Dental Insurance</li>
+            <li>96 hours vacation*</li>
+            <li>96 hours sick leave*</li>
+            <li> <a href="http://humanresources.vermont.gov/benefits-wellness/leave/personal-leave-incentive" target="_blank">40 hours Personal Leave Incentive</a></li>
+            <li>11 State & Federal Holidays</li>
+            <li>Flexible Schedule</li>
+            <li>Pension</li>
+            <li>On-site Recreation Trails & Gym</li>
+            <li><a href="http://www.neci.edu/">NECI</a> Cafeteria</li>
+          </ul>
+          <p><i>*Increases to 120 hours (each) after 5 years of service.</i>
+          <a href="http://humanresources.vermont.gov/careers/explore/benefits" target="_blank">More Benefits Information</a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns offset-by-three">
+          <h5>Location</h5>
+          <p>
+            1 National Life Dr <br> Montpelier, VT 05604
+          </p>
+          <p><i>Remote applicants will not be considered, but
+            teleworking is allowed. Relocation reimbursement is not available.</i></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <div id="map">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="section hiring">
+  <div class="container">
+    <div class="row">
+      <div class="eight columns offset-by-two">
+        <div class="center">
+          <h3>The Process</h3>
+          <p>What to expect during the hiring process.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <ol>
+          <li>Posting open until January 8, 2018</li>
+          <em>
+            Due to state recruiting policy, you may not hear anything from us until
+            the position closes.
+          </em>
+          <br><br>
+          <li><strong>Early to Mid January:</strong> Interview panel reviews applicants</li>
+          <li><strong>Mid to Late Jan:</strong> Selected candidates offered interviews</li>
+          <li><strong>Mid Jan to Feb:</strong> First interviews</li>
+          <li><strong>Mar:</strong> Second interviews <small>(If necessary)</small></li>
+          <li><strong>Mar:</strong> Offer</li>
+        </ol>
+      </div>
+      <div class="six columns">
+        <strong>Interviews</strong>
+        <p>
+          Interviews will be panel style, with each panelist asking a few questions.
+          You should expect to take up an entire hour, but 90 minutes have been
+          allotted to provide for overrun.
+        </p>
+        <p>
+          The panel will ask you questions based on our analysis of the
+          core competencies required for this position.
+        </p>
+        <p>
+          There will also be an interactive coding task to evaluate your programming ability.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns offset-by-three center">
+        <h2>How to Apply</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="six columns">
+        <ol>
+          <li>Select the appropriate job class for your skill level:</li>
+          <ul>
+            <li><a href="https://vthr.erp.state.vt.us/psp/VTHR/EMPLOYEE/HRMS/c/HRS_HRAM.HRS_CE.GBL?Page=HRS_CE_JOB_DTL&Action=A&JobOpeningId=622335&SiteId=1&PostingSeq=1" target="_blank">
+              AOT GIS Professional II</a>
+            </li>
+            <li><a href="https://vthr.erp.state.vt.us/psp/VTHR/EMPLOYEE/HRMS/c/HRS_HRAM.HRS_CE.GBL?Page=HRS_CE_JOB_DTL&Action=A&JobOpeningId=622357&SiteId=1&PostingSeq=1" target="_blank">
+              AOT GIS Professional III</a>
+            </li>
+            <li><a href="https://vthr.erp.state.vt.us/psp/VTHR/EMPLOYEE/HRMS/c/HRS_HRAM.HRS_CE.GBL?Page=HRS_CE_JOB_DTL&Action=A&JobOpeningId=622358&SiteId=1&PostingSeq=1" target="_blank">
+              AOT GIS Professional IV</a>
+            </li>
+          </ul>
+          <li><a href="https://www.youtube.com/watch?v=Lf1PhSEbj1M&t=155" target="_blank">Create an Account in VTHR</a> </li>
+          <li><a href="https://www.youtube.com/watch?v=7IHx_2VH2tY&t=160" target="_blank">Apply for the job</a> </li>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=7IHx_2VH2tY&t=557" target="_blank">Answer the Questionnaire*</a></li>
+          </ul>
+        </ol>
+      </div>
+      <div class="six columns">
+        <p>
+          <strong>Important:</strong> Fill out all required education and work experience
+          in the application, but <em>Be sure to attach a well formatted resume and cover letter as well.</em>
+        </p>
+        <p>
+          The output from the VTHR system is very difficult to read, and your skills and experience
+          will be communicated more effectively in your resume.
+        </p>
+        <p>
+          <small>
+          *These questions will be used by the system to determine your eligibility for
+          the position.
+          </small>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="title center">
+        <h4>Job Posting Documents</h4>
+      </div>
+      <div class="three columns offset-by-one center">
+        <a href="documents\AOT GIS Professional II.docx" target="_blank">
+        <img src="images\document.svg" alt="" class="doc-icon">
+        <br>
+        <small>AOT GIS Professional II Job Posting</small>
+      </a>
+      </div>
+      <div class="three columns offset-by-one center">
+        <a href="documents\AOT GIS Professional III.docx" target="_blank">
+        <img src="images\document.svg" alt="" class="doc-icon">
+        <br>
+        <small>AOT GIS Professional III Job Posting</small>
+      </a>
+      </div>
+      <div class="three columns offset-by-one center">
+        <a href="documents\AOT GIS Professional IV.docx" target="_blank">
+        <img src="images\document.svg" alt="" class="doc-icon">
+        <br>
+        <small>AOT GIS Professional IV Job Posting</small>
+      </a>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="section apply" id="apply">
+    <div class="container">
+      <div class="row">
+        <div class="eight columns offset-by-two">
+        <h1>Ready to get started?</h1>
+        <p>
+          Head over to the <a href="http://humanresources.vermont.gov/careers" target="_blank">State of Vermont Career site</a>.
+        </p>
+        <p>
+          Use the keyword search box to locate positions matching the text:
+        </p>
+        <p class="center"><strong>"AOT GIS"</strong> </p>
+        <h4>Not sure you're a perfect fit?</h4>
+        <p>
+          Apply anyways! We value teaching and learning, and there's plenty of room to grow.
+        </p>
+        <h3>Want to know more?</h3> Contact <a href="mailto:stephen.smith@vermont.gov">Stephen Smith</a>.
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="section footer">
+    <div class="container">
+      <div class="row">
+        <div class="ten columns offset-by-one center">
+          <strong>Thanks to:</strong>
+          <p>
+            <a href="https://unsplash.com/photos/vkHkVBgmA4k/share">Sam Burriss</a>,
+            <a href="https://unsplash.com/photos/8OyKWQgBsKQ">Markus Spiske</a>, and
+            <a href="https://unsplash.com/photos/an92Mth-ExE">Thomas Lefebvre</a>
+            for their photos from Unsplash.com
+          </p>
+          <p>
+            Pine Tools for the <a href="http://pinetools.com/duotone-effect-spotify">Duotone Effect</a>
+          </p>
+          <p>
+            Mapbox and Axis Maps for their inspirational hiring pages.
+          </p>
+          <p>
+            Skeleton for the lightweight CSS
+          </p>
+          <p>
+            GitHub for the free hosting
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script>
+
+  var randStyle = Math.floor(Math.random()*3);
+
+  switch(randStyle) {
+    case 0:
+      backgroundMap = 'mapbox://styles/vtransparency/cj94vk2ob0cyn2rt2x9yi4hon'
+      break;
+    case 1:
+      backgroundMap = 'mapbox://styles/vtransparency/cj94vjnsi0d3a2sl1i9ufxlqj'
+      break;
+    case 2:
+      backgroundMap = 'mapbox://styles/vtransparency/cj94vizzl0d052rknwxzgdfxw'
+      break;
+    case 3:
+      backgroundMap = 'mapbox://styles/vtransparency/cj95q6kkt6fqw2sown9bcqy09'
+      break;
+  }
+
+  mapboxgl.accessToken = 'pk.eyJ1IjoidnRyYW5zcGFyZW5jeSIsImEiOiJjajhjMG50dGkwNG5rMzBvMDF5OHM5N3BwIn0.HE4uL6s3cg-PDRe6lKhuEA';
+  var map = new mapboxgl.Map({
+    container: 'map',
+    style: backgroundMap,
+    center: [-72.583816, 44.256988],
+    zoom: 13
+  });
+
+  map.scrollZoom.disable();
+
+  var geojson = {
+    type: 'FeatureCollection',
+    features: [{
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [
+          -72.58394211530685,
+          44.257181743163514
+        ]
+      }
+    }]
+  };
+
+  // add markers to map
+geojson.features.forEach(function(marker) {
+
+  // create a HTML element for each feature
+  var el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+  .setLngLat(marker.geometry.coordinates)
+  .addTo(map);
+});
+
+</script>
+
+  <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
