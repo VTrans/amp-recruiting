@@ -70,6 +70,10 @@
   background-position: center;
 }
 
+.categories a {
+  color: #11e976;
+}
+
 .legalese {
   text-align: left;
   /*margin-left: 5%;*/
@@ -83,10 +87,6 @@
 .tasks {
   background-color: #FFA724;
 }
-
-/*.nitty-gritty {
-  background-color: #8586C5;
-}*/
 
 .hiring {
   background-color: #94F9FF;
