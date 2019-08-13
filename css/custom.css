@@ -16,9 +16,9 @@
 /* Hero
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .hero {
-  background-image: url('../images/bethel-fish-cropped-sm.jpg');
+  background-image: url('../images/roxbury-2-cropped-3.jpg'); /*lyndon-cropped-2*/
   background-size: cover;
-  background-position: left top ;
+  background-position: left top;
 }
 
 .hero-heading {
